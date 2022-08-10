@@ -13,3 +13,13 @@ const images = [
   },
 ];
 
+
+const gallery = document.querySelector(".gallery");
+const makeImagesList = ({url,alt}) => {
+  return `<li class = "gallery__item"><img src = "${url}" alt = "${alt}" width =360px height=220px class = "gallery_picture" ></li>`;
+};
+const makeImages = images.map(makeImagesList).join(" ");
+gallery.insertAdjacentHTML("beforeend", makeImages);
+
+
+
